@@ -4,13 +4,11 @@
   margin: auto;
 }
 
-.navbar {
-  background-color: #c19c9c;
-  color: white;
+.containerNavbar {
+  background-color: white;
+  color: #c19c9c;
   display: flex;
   justify-content: space-around;
   list-style: none;
-  margin-top: 50px;
-  margin-bottom: 50px;
   padding: 10px 10px;
 }
