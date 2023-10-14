@@ -1,16 +1,29 @@
 import { Outlet } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <>
-      <div className="contenedorfooter">
+      <div className="divfooter">
         <div>
           <h4>REDES SOCIALES</h4>
         </div>
-        <div>
-          <img src="../../../assets/images/facebook.png" alt="Facebook" />
-          <img src="../../../assets/images/Instagram.png" alt="Instagram" />
-          <img src="../../../assets/images/mail.png" alt="Mail" />
+        <div className="imgfooter">
+          <img
+            className="imgfooter1"
+            src="https://res.cloudinary.com/daaqcfs2o/image/upload/v1697286901/facebook_awp4ui.png"
+            alt="Facebook"
+          />
+          <img
+            className="imgfooter1"
+            src="https://res.cloudinary.com/daaqcfs2o/image/upload/v1697286901/mail_pkqvxj.png"
+            alt="Mail"
+          />
+          <img
+            className="imgfooter1"
+            src="https://res.cloudinary.com/daaqcfs2o/image/upload/v1697286902/Instagram_av2b5h.png"
+            alt="Instagram"
+          />
         </div>
       </div>
     </>

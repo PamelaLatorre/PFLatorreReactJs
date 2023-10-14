@@ -42,125 +42,58 @@ function ResponsiveAppBar() {
 
   return (
     <>
-      <AppBar position="static">
-        <Container maxWidth="xl" className="containerNavbar">
-          <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Link to="/">
-              <Box
-                href="#app-bar-with-responsive-menu"
-                sx={{
-                  overflow: "hidden",
-                  display: { xs: "none", md: "flex" },
+      <div className="containerNavbar">
+        <Link to="/">
+          <img className="logo" src={logo} alt="Logo del sitio" />
+        </Link>
 
-                  textDecoration: "none",
-                  justifyContent: "center",
-                  width: 200,
-                  height: 100,
-                }}
-              >
-                <img src={logo} alt="Logo del sitio" />
-              </Box>
-            </Link>
-            <Box
-              sx={{
-                display: { xs: "flex", md: "none" },
-                alignItems: "center",
-              }}
-            >
-              <IconButton
-                size="small"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="primary"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-
-            <Box
-              sx={{
-                mx: 2,
-                overflow: "hidden",
-                display: { xs: "flex", md: "none" },
-                justifyContent: "center",
-                width: 100,
-                height: 90,
-              }}
-            >
-              <img src={logo} alt="Logo del sitio" />
-            </Box>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "primary", display: "block" }}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
-
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <RxAvatar />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-              <CartWidget />
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+        <ul className="categories">
+          <Link to="/">
+            <li>INICIO</li>
+          </Link>
+          <Link to="/category/fibrasNaturales">
+            <li>FIBRAS NATURALES</li>
+          </Link>
+          <Link to="/category/aromas">
+            <li>AROMAS</li>
+          </Link>
+          <Link to="/category/textiles">
+            <li>TEXTILES</li>
+          </Link>
+        </ul>
+        <Box
+          sx={{ display: "flex", alignItems: "center", alignContent: "center" }}
+        >
+          <Tooltip title="Open settings">
+            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <RxAvatar />
+            </IconButton>
+          </Tooltip>
+          <Menu
+            sx={{ mt: "45px" }}
+            id="menu-appbar"
+            anchorEl={anchorElUser}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            open={Boolean(anchorElUser)}
+            onClose={handleCloseUserMenu}
+          >
+            {settings.map((setting) => (
+              <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <Typography textAlign="center">{setting}</Typography>
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+        <CartWidget />
+      </div>
     </>
   );
 }

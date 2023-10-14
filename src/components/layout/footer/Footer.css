@@ -1,7 +1,21 @@
-.contenedorfooter {
+.divfooter {
   width: 100%;
   background-color: #c19c9c;
-  height: 10vh;
+  height: 20vh;
+  text-align: center;
+  padding: 30px;
+  color: #555151;
+}
+
+.imgfooter {
+  height: 35px;
+  margin-inline: 5px;
   display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.imgfooter1 {
+  height: 30px;
+  margin-inline: 5px;
 }

@@ -1,0 +1,51 @@
+.divdetail {
+  max-width: 400px;
+  margin: 20px auto 45px;
+  padding: 20px;
+  /* border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.titulodetail {
+  color: #c19c9c;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.imgdetail {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.pdetail {
+  margin-bottom: 15px;
+  color: #957d7c;
+  text-align: justify;
+}
+
+.preciodetail {
+  display: flex;
+  justify-content: center;
+  font-size: 130%;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.counterdetail {
+  margin-left: 70px;
+  color: #957d7c;
+}
+
+.divlogodetail {
+  display: flex;
+  justify-content: center;
+}
+
+.logodetail {
+  margin-top: 25px;
+  height: 160px;
+}
