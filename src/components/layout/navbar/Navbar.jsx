@@ -2,6 +2,7 @@ import * as React from "react";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import { RxAvatar } from "react-icons/rx";
 import logo from "../../../assets/images/logo.jpeg";
+// import logo1 from "../../../assets/images/logo1.jpeg";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -160,7 +161,6 @@ function ResponsiveAppBar() {
           </Toolbar>
         </Container>
       </AppBar>
-      <Outlet />
     </>
   );
 }

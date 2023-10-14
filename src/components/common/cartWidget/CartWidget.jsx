@@ -4,7 +4,7 @@ import { GrCart } from "react-icons/gr";
 
 const CartWidget = () => {
   return (
-    <Link to="/CartContainer">
+    <Link to="/Cart">
       <div className="cart">
         <span>2</span>
         <GrCart />

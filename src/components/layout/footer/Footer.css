@@ -1,0 +1,7 @@
+.contenedorfooter {
+  width: 100%;
+  background-color: #c19c9c;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}

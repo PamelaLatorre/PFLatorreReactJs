@@ -1,28 +1,28 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/home/Home";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
+import Cart from "./components/pages/cart/Cart";
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
-import Navbar from "./components/layout/navbar/Navbar";
-import CartContainer from "./components/pages/cart/CartContainer";
-import { ThemeProvider } from "@emotion/react";
+import Layout from "./components/layout/Layout";
 import { customTheme } from "./themeConfig";
+import { ThemeProvider } from "@emotion/react";
 
 function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={customTheme}>
         <Routes>
-          <Route element={<Navbar />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/itemListContainer" element={<ItemListContainer />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<ItemListContainer />} />
             <Route
-              path="/itemDetailContainer"
-              element={<ItemDetailContainer />}
+              path="/category/:categoryName"
+              element={<ItemListContainer />}
             />
-            <Route path="/cartContainer" element={<CartContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+
+            <Route path="*" element={<h1>Not found</h1>} />
           </Route>
-          <Route path="*" element={<h1>Not found</h1>} />
-        </Routes>{" "}
+        </Routes>
       </ThemeProvider>
     </BrowserRouter>
   );

@@ -1,0 +1,32 @@
+.home {
+  text-align: center;
+  margin: 45px 45px;
+  color: #957d7c;
+}
+
+.carousel {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 45px;
+  flex-wrap: wrap;
+}
+
+.phome {
+  text-align: center;
+  margin: 55px 55px;
+  color: #957d7c;
+  font-size: 150%;
+}
+
+.home1 {
+  display: flex;
+  justify-content: center;
+}
+
+.logohome {
+  width: 250px;
+  height: auto;
+}
