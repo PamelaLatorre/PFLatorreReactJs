@@ -13,6 +13,10 @@
   flex-wrap: wrap;
 }
 
+.hidden {
+  display: none;
+}
+
 .phome {
   text-align: center;
   margin: 55px 55px;

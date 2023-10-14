@@ -17,8 +17,9 @@ import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-
   const { categoryName } = useParams();
+  const isFiltering = !!categoryName;
+
   console.log(categoryName ? "estoy intentando filtrar" : "Estoy en el home");
 
   useEffect(() => {
@@ -35,13 +36,13 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <div className="home">
+      <div className={`home ${isFiltering ? "hidden" : ""}`}>
         <Typography variant="h4" gutterBottom color="primary.primary">
           ¡Bienvenido a Herminia!
         </Typography>
         <h2 color="secondary.secondary">Armá tus ambientes mas bonitos</h2>
       </div>
-      <Carousel className="carousel">
+      <Carousel className={`carousel ${isFiltering ? "hidden" : ""}`}>
         <div>
           <img src={home1} alt="Imagen 1" />
         </div>
