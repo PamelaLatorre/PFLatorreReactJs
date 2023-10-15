@@ -2,12 +2,13 @@ import CounterContainer from "../../common/counter/CounterContainer";
 import "./ItemDetailContainer.css";
 import logo1 from "../../../assets/images/logo1.jpg";
 import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 
 export const ItemDetail = ({ productSelected, onAdd }) => {
   return (
     <div className="divdetail">
       {/* aca todo el detalle */}
-      <h2 className="titulodetail">{productSelected.title}</h2>
+      <Typography className="titulodetail">{productSelected.title}</Typography>
       <img
         className="imgdetail"
         src={productSelected.img}
