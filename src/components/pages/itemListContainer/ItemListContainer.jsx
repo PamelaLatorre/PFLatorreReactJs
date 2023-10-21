@@ -36,41 +36,6 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <div className={`home ${isFiltering ? "hidden" : ""}`}>
-        <Typography variant="h4" gutterBottom color="primary.primary">
-          ¡Bienvenido a Herminia!
-        </Typography>
-        <h2 color="secondary.secondary">Armá tus ambientes mas bonitos</h2>
-      </div>
-      <Carousel className={`carousel ${isFiltering ? "hidden" : ""}`}>
-        <div>
-          <img src={home1} alt="Imagen 1" />
-        </div>
-        <div>
-          <img src={home2} alt="Imagen 2" />
-        </div>
-        <div>
-          <img src={home3} alt="Imagen 3" />
-        </div>
-        <div>
-          <img src={home4} alt="Imagen 4" />
-        </div>
-        <div>
-          <img src={home5} alt="Imagen 5" />
-        </div>
-        <div>
-          <img src={home6} alt="Imagen 6" />
-        </div>
-      </Carousel>
-      <div className="home1">
-        <p className="phome">
-          <strong>Conocenos,</strong>
-          <br /> y viví la mas linda experiencia <br />
-          en aromas, textiles, fibras naturales y flores secas..
-          <br /> Todo lo que necesitas para poner tu <em>lugar</em> mas bonito.
-        </p>
-        <img className="logohome" src={logo1} alt="Logo de la empresa" />
-      </div>
       <ItemList items={items} />
     </div>
   );

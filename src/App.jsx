@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 import Cart from "./components/pages/cart/Cart";
+import Home from "./components/pages/home/Home";
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
 import Layout from "./components/layout/Layout";
 import { customTheme } from "./themeConfig";
@@ -12,7 +13,7 @@ function App() {
       <ThemeProvider theme={customTheme}>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/" element={<Home />} />
             <Route
               path="/category/:categoryName"
               element={<ItemListContainer />}

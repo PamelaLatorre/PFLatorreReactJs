@@ -9,17 +9,22 @@ import home5 from "../../../assets/images/home5.jpg";
 import home6 from "../../../assets/images/home6.jpg";
 import logo1 from "../../../assets/images/logo1.jpg";
 import "./Home.css";
+import { useParams } from "react-router-dom";
+import ItemListContainer from "../../pages/itemListContainer/ItemListContainer";
 
 const Home = () => {
+  const { categoryName } = useParams();
+  const isFiltering = !!categoryName;
+
   return (
     <div>
-      <div className="home">
+      <div className={`home ${isFiltering ? "hidden" : ""}`}>
         <Typography variant="h4" gutterBottom color="primary.primary">
           ¡Bienvenido a Herminia!
         </Typography>
         <h2 color="secondary.secondary">Armá tus ambientes mas bonitos</h2>
       </div>
-      <Carousel className="carousel">
+      <Carousel className={`carousel ${isFiltering ? "hidden" : ""}`}>
         <div>
           <img src={home1} alt="Imagen 1" />
         </div>
@@ -48,6 +53,7 @@ const Home = () => {
         </p>
         <img className="logohome" src={logo1} alt="Logo de la empresa" />
       </div>
+      <ItemListContainer />
     </div>
   );
 };
