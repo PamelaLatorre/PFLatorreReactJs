@@ -6,7 +6,7 @@ export let products = [
     stock: 4,
     description:
       "Los cestos son los elementos que permiten agregar mucha calidez a tu hogar",
-    category: "fibrasNaturales",
+    category: "fibras-naturales",
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697254281/prod1_atunxl.jpg",
   },
   {
@@ -16,7 +16,7 @@ export let products = [
     stock: 6,
     description:
       "Son elementos basicos e indispensables para armonizar y dar calidez",
-    category: "fibrasNaturales",
+    category: "fibras-naturales",
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697254328/prod2_ejmkr5.jpg",
   },
   {
@@ -26,7 +26,7 @@ export let products = [
     stock: 4,
     description:
       "Diferentes adornos y de diferentes tamanos, absolutamente flexibles para los distintos usos que necesites",
-    category: "fibrasNaturales",
+    category: "fibras-naturales",
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255029/prod3_clqxg3.jpg",
   },
   {
@@ -56,7 +56,7 @@ export let products = [
     stock: 5,
     description:
       "Las velas son ese complemento ideal para aromatizar cada ambiente de tu espacio, delicado y suave",
-    category: "armonas",
+    category: "aromas",
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255033/prod6_owxkve.jpg",
   },
   {
