@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
 import "./CartWidget.css";
 import { GrCart } from "react-icons/gr";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+import { Badge } from "@mui/material";
 
 const CartWidget = () => {
+  const { cart } = useContext(CartContext);
+
   return (
-    <div className="cart">
-      <Link to="/Cart">
-        <div className="cart">
-          <span>2</span>
-          <GrCart />
-        </div>
-      </Link>
-    </div>
+    <Link to="/cart">
+      <Badge
+        className="cart"
+        badgeContent={cart.length}
+        showZero
+        color="primary"
+      >
+        <GrCart color="#c19c9c" />
+      </Badge>
+    </Link>
   );
 };
 

@@ -2,14 +2,11 @@
   max-width: 400px;
   margin: 20px auto 45px;
   padding: 20px;
-  /* border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .titulodetail {
   color: #c19c9c;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 10px;
   text-align: center;
 }

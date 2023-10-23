@@ -1,0 +1,15 @@
+.counterh2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterbut {
+  height: 50px;
+}
+
+.counterbutton {
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+}

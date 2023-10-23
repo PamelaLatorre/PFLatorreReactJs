@@ -11,6 +11,7 @@ import logo1 from "../../../assets/images/logo1.jpg";
 import "./Home.css";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../../pages/itemListContainer/ItemListContainer";
+import { CartContext } from "../../../context/CartContext";
 
 const Home = () => {
   const { categoryName } = useParams();

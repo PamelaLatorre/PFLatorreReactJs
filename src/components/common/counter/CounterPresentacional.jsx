@@ -1,19 +1,39 @@
 import { Button } from "@mui/material";
+import "./Counter.css";
 
 const CounterPresentacional = ({ sumar, contador, restar, onAdd }) => {
   return (
-    <div>
-      <Button size="small" variant="outlined" onClick={sumar}>
-        sumar
-      </Button>
-      <h4> {contador} </h4>
-      <Button size="small" variant="outlined" onClick={restar}>
-        restar
-      </Button>
-      <Button size="small" variant="outlined" onClick={() => onAdd(contador)}>
-        Agregar al carrito
-      </Button>
-    </div>
+    <>
+      <div style={{ marginBottom: "20px", display: "flex", gap: "30px" }}>
+        <Button
+          className="counterbut"
+          variant="outlined"
+          onClick={restar}
+          style={{ color: "#957d7c" }}
+        >
+          -
+        </Button>
+        <h2 className="counterh2">{contador}</h2>
+        <Button
+          className="counterbut"
+          variant="outlined"
+          onClick={sumar}
+          style={{ color: "#957d7c" }}
+        >
+          +
+        </Button>
+      </div>
+      <div className="counterbutton">
+        <Button
+          variant="contained"
+          size="large"
+          onClick={() => onAdd(contador)}
+          style={{ backgroundColor: "#957d7c" }}
+        >
+          Agregar al carrito
+        </Button>
+      </div>
+    </>
   );
 };
 

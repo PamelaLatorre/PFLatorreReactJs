@@ -7,7 +7,6 @@ import { Typography } from "@mui/material";
 export const ItemDetail = ({ productSelected, onAdd }) => {
   return (
     <div className="divdetail">
-      {/* aca todo el detalle */}
       <Typography className="titulodetail">{productSelected.title}</Typography>
       <img
         className="imgdetail"
@@ -20,7 +19,6 @@ export const ItemDetail = ({ productSelected, onAdd }) => {
       <div className="preciodetail">
         <p> ${productSelected.price}.-</p>
       </div>
-      {/* Aca el contador */}
       <div className="counterdetail">
         <CounterContainer stock={productSelected.stock} onAdd={onAdd} />
       </div>

@@ -1,30 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
-import Cart from "./components/pages/cart/Cart";
-import Home from "./components/pages/home/Home";
-import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailContainer";
-import Layout from "./components/layout/Layout";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./router/AppRouter";
+import CartContextComponent from "./context/CartContext";
 import { customTheme } from "./themeConfig";
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "@mui/material";
 
 function App() {
   return (
     <BrowserRouter>
-      <ThemeProvider theme={customTheme}>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/category/:categoryName"
-              element={<ItemListContainer />}
-            />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-
-            <Route path="*" element={<h1>Not found</h1>} />
-          </Route>
-        </Routes>
-      </ThemeProvider>
+      {/* <ThemeProvider theme={customTheme}> */}
+      <CartContextComponent>
+        <AppRouter />
+      </CartContextComponent>
+      {/* </ThemeProvider> */}
     </BrowserRouter>
   );
 }
