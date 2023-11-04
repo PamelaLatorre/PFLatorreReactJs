@@ -6,16 +6,13 @@ import { CartContext } from "../../../context/CartContext";
 import { Badge } from "@mui/material";
 
 const CartWidget = () => {
-  const { cart } = useContext(CartContext);
+  const { getTotalQuantity } = useContext(CartContext);
+
+  let total = getTotalQuantity();
 
   return (
     <Link to="/cart">
-      <Badge
-        className="cart"
-        badgeContent={cart.length}
-        showZero
-        color="primary"
-      >
+      <Badge className="cart" badgeContent={total} showZero color="primary">
         <GrCart color="#c19c9c" />
       </Badge>
     </Link>
