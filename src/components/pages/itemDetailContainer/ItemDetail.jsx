@@ -4,7 +4,12 @@ import logo1 from "../../../assets/images/logo1.jpg";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
-export const ItemDetail = ({ productSelected, onAdd }) => {
+export const ItemDetail = ({
+  productSelected,
+  onAdd,
+  initial,
+  showCounter,
+}) => {
   return (
     <div className="divdetail">
       <Typography className="titulodetail">{productSelected.title}</Typography>
@@ -19,9 +24,27 @@ export const ItemDetail = ({ productSelected, onAdd }) => {
       <div className="preciodetail">
         <p> ${productSelected.price}.-</p>
       </div>
-      <div className="counterdetail">
-        <CounterContainer stock={productSelected.stock} onAdd={onAdd} />
-      </div>
+
+      {initial && (
+        <h4 className="h4ItDetail">
+          Ya tienes {initial} elementos cargados en el carrito!
+        </h4>
+      )}
+
+      {showCounter ? (
+        <div className="counterdetail">
+          <CounterContainer
+            stock={productSelected.stock}
+            onAdd={onAdd}
+            initial={initial}
+          />
+        </div>
+      ) : (
+        <Link to="/cart" className="terminar">
+          TERMINAR TU COMPRA
+        </Link>
+      )}
+
       <div className="divlogodetail">
         <Link to="/">
           <img className="logodetail" src={logo1} alt="Logo de la empresa" />
