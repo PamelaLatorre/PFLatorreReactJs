@@ -1,16 +1,5 @@
 export let products = [
   {
-    id: 1,
-    title: "Cestos",
-    price: 25000,
-    stock: 4,
-    description:
-      "Los cestos son los elementos que permiten agregar mucha calidez a tu hogar",
-    category: "fibras-naturales",
-    img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697254281/prod1_atunxl.jpg",
-  },
-  {
-    id: 2,
     title: "Bandejas",
     price: 14500,
     stock: 6,
@@ -20,7 +9,6 @@ export let products = [
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697254328/prod2_ejmkr5.jpg",
   },
   {
-    id: 3,
     title: "Adornos",
     price: 11000,
     stock: 4,
@@ -29,18 +17,8 @@ export let products = [
     category: "fibras-naturales",
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255029/prod3_clqxg3.jpg",
   },
+
   {
-    id: 4,
-    title: "Perfuminas",
-    price: 5100,
-    stock: 5,
-    description:
-      "Perfectas para para aromatizar tus textiles y distintos géneros",
-    category: "aromas",
-    img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255029/prod4_dxabcr.jpg",
-  },
-  {
-    id: 5,
     title: "Difusores",
     price: 7800,
     stock: 10,
@@ -50,7 +28,6 @@ export let products = [
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255031/prod5_btvufd.jpg",
   },
   {
-    id: 6,
     title: "Velas",
     price: 9400,
     stock: 5,
@@ -60,7 +37,6 @@ export let products = [
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255033/prod6_owxkve.jpg",
   },
   {
-    id: 7,
     title: "Mantas",
     price: 11800,
     stock: 5,
@@ -70,7 +46,6 @@ export let products = [
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255035/prod7_dsxznu.jpg",
   },
   {
-    id: 8,
     title: "Caminos de mesa",
     price: 9500,
     stock: 5,
@@ -80,7 +55,6 @@ export let products = [
     img: "https://res.cloudinary.com/daaqcfs2o/image/upload/v1697255038/prod8_wqyy2m.jpg",
   },
   {
-    id: 9,
     title: "Repasadores",
     price: 7100,
     stock: 15,

@@ -1,11 +1,13 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import { useState, useEffect } from "react";
-import { products } from "../../../productsMock";
 
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
+
+import { getDocs, collection, query, where, addDoc } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -14,17 +16,26 @@ const ItemListContainer = () => {
   console.log(categoryName ? "estoy intentando filtrar" : "Estoy en el home");
 
   useEffect(() => {
-    const productosFiltrados = products.filter(
-      (product) => product.category === categoryName
-    );
+    let productsCollection = collection(db, "products");
+    let consulta = undefined;
 
-    const tarea = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(categoryName ? productosFiltrados : products);
-      }, 2000);
+    if (!categoryName) {
+      consulta = productsCollection;
+    } else {
+      consulta = query(
+        productsCollection,
+        where("category", "==", categoryName)
+      );
+    }
+    getDocs(consulta).then((res) => {
+      let newArray = res.docs.map((products) => {
+        return { ...products.data(), id: products.id };
+      });
+
+      let arrayFiltrado = newArray.filter((elemento) => elemento.stock > 0);
+
+      setItems(arrayFiltrado);
     });
-
-    tarea.then((res) => setItems(res)).catch((error) => console.log(error));
   }, [categoryName]);
 
   return (

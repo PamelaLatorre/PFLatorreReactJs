@@ -18,3 +18,15 @@
   gap: 10px;
   justify-content: flex-end;
 }
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkh2 {
+  margin-bottom: 20px;
+  color: #857979;
+}

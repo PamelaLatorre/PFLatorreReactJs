@@ -12,7 +12,7 @@ export const ItemDetail = ({
 }) => {
   return (
     <div className="divdetail">
-      <Typography className="titulodetail">{productSelected.title}</Typography>
+      <h2 className="titulodetail">{productSelected.title}</h2>
       <img
         className="imgdetail"
         src={productSelected.img}
