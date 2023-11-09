@@ -13,7 +13,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const pages = ["Inicio", "Fibras naturales", "Aromas", "Textiles"];

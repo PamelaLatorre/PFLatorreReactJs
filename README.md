@@ -1,8 +1,12 @@
-# React + Vite
+## Ecommerce elaborado: Herminia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](./src/assets/images/logo.jpeg)
 
-Currently, two official plugins are available:
+#### Las herramientas utilizadas han sido:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- react
+- firebase
+- yup
+- formik
+- mui
+- react-icons

@@ -3,13 +3,13 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB94hTnyPT1XJBo-p1PFdq_oOPpoiVPmLM",
-  authDomain: "herminia-react.firebaseapp.com",
-  projectId: "herminia-react",
-  storageBucket: "herminia-react.appspot.com",
-  messagingSenderId: "608581134147",
-  appId: "1:608581134147:web:735236632526ac626931f6",
-  measurementId: "G-HEKQYHS1D1",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

@@ -4,7 +4,7 @@
   margin-bottom: 40px;
 }
 
-.cart {
+.carts {
   display: flex;
   justify-content: space-evenly;
   border: 4px solid #c19c9c;

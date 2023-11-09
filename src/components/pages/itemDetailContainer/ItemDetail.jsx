@@ -2,7 +2,7 @@ import CounterContainer from "../../common/counter/CounterContainer";
 import "./ItemDetailContainer.css";
 import logo1 from "../../../assets/images/logo1.jpg";
 import { Link } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { Button } from "@mui/material";
 
 export const ItemDetail = ({
   productSelected,
@@ -40,9 +40,17 @@ export const ItemDetail = ({
           />
         </div>
       ) : (
-        <Link to="/cart" className="terminar">
-          TERMINAR TU COMPRA
-        </Link>
+        <Button
+          variant={"outlined"}
+          type="button"
+          style={{
+            backgroundColor: "#957d7c",
+          }}
+        >
+          <Link to="/cart" style={{ textDecoration: "none", color: "white" }}>
+            TERMINAR TU COMPRA
+          </Link>
+        </Button>
       )}
 
       <div className="divlogodetail">
