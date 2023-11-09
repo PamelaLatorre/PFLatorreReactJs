@@ -9,7 +9,6 @@ import { CartContext } from "../../../context/Cartcontext";
 import { serverTimestamp } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
-import { CardTravelSharp } from "@mui/icons-material";
 
 const CheckoutFormik = () => {
   const [orderId, setOrderId] = useState(null);
@@ -25,7 +24,6 @@ const CheckoutFormik = () => {
       total,
       time: serverTimestamp(),
     };
-    console.log(order);
 
     const ordersCollection = collection(db, "orders");
     addDoc(ordersCollection, order).then((res) => setOrderId(res.id));
@@ -73,8 +71,6 @@ const CheckoutFormik = () => {
       //   .oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
     }),
   });
-
-  // console.log(errors);
 
   return (
     <>

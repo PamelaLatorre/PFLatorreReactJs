@@ -29,7 +29,7 @@ const Cart = () => {
         clearCart();
         Swal.fire("Carrito eliminado!", "", "success");
       } else if (result.isDenied) {
-        Swal.fire("El carrito no se eliminó", "", "info");
+        Swal.fire("El carrito no se eliminó!", "", "info");
       }
     });
   };
