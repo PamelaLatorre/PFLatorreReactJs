@@ -25,6 +25,11 @@ const Footer = () => {
             alt="Instagram"
           />
         </div>
+        <div>
+          <h4 className="footerh4">
+            Copyright Pamela Latorre - 2023. Todos los derechos reservados.{" "}
+          </h4>
+        </div>
       </div>
     </>
   );
