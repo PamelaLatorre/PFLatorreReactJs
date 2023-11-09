@@ -2,7 +2,7 @@
 
 ![](./src/assets/images/logo.jpeg)
 
-#### Este proyecto fue presentado como Instancia Final del Curso de ReactJS.
+#### Este proyecto fue presentado como Instancia Final del Curso de React JS.
 
 #### Las herramientas utilizadas han sido:
 
