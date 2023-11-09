@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import "./CheckoutFormik.css";
 
-import { CartContext } from "../../../context/Cartcontext";
+import { CartContext } from "../../../context/CartContext";
 import { serverTimestamp } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
